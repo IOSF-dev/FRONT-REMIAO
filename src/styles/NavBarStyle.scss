@@ -11,7 +11,12 @@
 }
 
 .Nav_Item {
+    cursor: pointer;
     border-radius: 8px;
     padding: 8px;
     border: 2px solid #000;
+     transition: transform 0.4s ease;
 }
+.Nav_Item:hover {
+  transform:  scale(1.1);
+} 

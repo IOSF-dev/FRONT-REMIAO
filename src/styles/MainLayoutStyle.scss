@@ -25,7 +25,7 @@
 }
 //////// que cuando este puntero encima haga transicion a eje Y 6px y que la escala la agrande un 1,05
 .main-card:hover {
-  transform: translateY(-6px) scale(1.05);
+  transform:  scale(1.1);
 }
 /////el rebote (tofix)
 .main-card.bounce {
