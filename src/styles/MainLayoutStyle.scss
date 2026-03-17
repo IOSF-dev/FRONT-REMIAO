@@ -1,0 +1,35 @@
+@use "./variables.scss" as*;
+/// app-layout es el conteiner que centra main-card
+.app-layout {
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: 10rem;
+}
+//// main card es el boton con la huella del gato/perro
+.main-card {
+  margin:  auto;
+  @include glass-card; /// que incluya la variante glass card
+  width: 18%;
+  height: 90%;
+  cursor: pointer;
+  background-image: url(../../public/MIAOB.svg);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+//////// que cuando este puntero encima haga transicion a eje Y 6px y que la escala la agrande un 1,05
+.main-card:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+/////el rebote (tofix)
+.main-card.bounce {
+  @include bounce;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
