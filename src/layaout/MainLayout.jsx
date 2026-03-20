@@ -1,33 +1,24 @@
-import React from 'react'
+import React from 'react'  
 
-import NavBarComponent from '../components/NavBarComponent.jsx';
 
+import { Outlet } from 'react-router';
+import FooterComponet from '../components/FooterComponet.jsx';
+import HeaderComponet from "../components/HeaderComponet.jsx"
+
+//codex why not render nav?
 
 
 
 const MainLayout = () => {
-//const [showSecondary, setShowSecondary] = useState(false);
-//const [bounce, setBounce] = useState(false); ----------------------${bounce ? "bounce" : ""}
-  //const [activeSection, setActiveSection] = useState(null);
-
  
+  
 
-
-
-
-/////main y app....eh cambia eso no?
 
   return (
     <>
-<hr />
-    <div className="app-layout">
-      <div className={`main-card `}/>
-    </div>
-    <hr />
-    <br />
-    <br />
-    
-    <NavBarComponent/>
+    <HeaderComponet/>
+     <Outlet/>
+    <FooterComponet/>
     </>
   );
 }
